@@ -1,8 +1,15 @@
 #include "gmock/gmock.h"
 
 class Cal {
- public:
-  int GetSum(int a, int b) { return a + b; }
+public:
+	int getSum(int a, int b) {
+		return  a + b;
+	}
+
+	int getGop(int a, int b) {
+		return a * b;
+	}
+  
   int getDivide(int a, int b) {
     if (b == 0) return 0;
     return a / b;
@@ -11,9 +18,13 @@ class Cal {
 };
 
 TEST(TEAMB, test_add) {
-  Cal cal;
-  int ret = cal.GetSum(1, 1);
-  EXPECT_EQ(ret, 2);
+	Cal cal;
+	EXPECT_EQ(cal.getSum(1, 1), 2);	
+}
+
+TEST(TEAMB, test_gop) {
+	Cal cal;
+	EXPECT_EQ(cal.getGop(1, 1), 1);
 }
 
 TEST(TEAMB, test_devide) {
