@@ -3,16 +3,19 @@
 
 class Cal {
 public:
-	int GetSum(int a, int b) {
+	int getSum(int a, int b) {
 		return  a + b;
 	}
 
+	int getGop(int a, int b) {
+		return a * b;
+	}
 };
 
 TEST(TEAMB, test_add) {
 	Cal cal;
-	int ret = cal.GetSum(1, 1);
-	EXPECT_EQ(ret, 2);
+	EXPECT_EQ(cal.getSum(1, 1), 2);
+	EXPECT_EQ(cal.getGop(1, 1), 1);
 }
 
 int main() {
