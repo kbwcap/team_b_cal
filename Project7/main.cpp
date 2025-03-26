@@ -27,7 +27,7 @@ TEST(TEAMB, test_zegop) {
 
 TEST(TEAMB, test_minus) {
     Cal cal;
-    int ret = cal.GetSumSum(3, 4);
+    int ret = cal.getMinus(3, 4);
     EXPECT_EQ(ret, -1);
 }
 
